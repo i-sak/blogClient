@@ -32,7 +32,7 @@
             <div
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
-              <h2 class="title text-center">Let's talk product</h2>
+              <h2 class="title text-center">Let's talk</h2>
               <h5 class="description">
                 This is the paragraph where you can write more details about
                 your product. Keep you user engaged by providing meaningful
@@ -103,7 +103,7 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Gigi Hadid
+                      Name : ?????
                       <br />
                       <small class="card-description text-muted">Model</small>
                     </h4>
@@ -207,7 +207,7 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Kendall Jenner
+                      Name : ?????
                       <br />
                       <small class="card-description text-muted">Model</small>
                     </h4>
@@ -300,9 +300,10 @@ export default {
       type: String,
       default: require("@/assets/img/bg7.jpg")
     },
+
     teamImg1: {
       type: String,
-      default: require("@/assets/img/faces/avatar.jpg")
+      default: require("@/assets/img/faces/silhouette1.png")
     },
     teamImg2: {
       type: String,
@@ -310,7 +311,7 @@ export default {
     },
     teamImg3: {
       type: String,
-      default: require("@/assets/img/faces/kendall.jpg")
+      default: require("@/assets/img/faces/silhouette2.png")
     }
   },
   data() {
