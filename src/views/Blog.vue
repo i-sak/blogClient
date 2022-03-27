@@ -6,16 +6,17 @@
           <div
             class="md-layout-item md-size-50 md-small-size-70 md-xsmall-size-100"
           >
-            <h1 class="title">Your Story Starts With Us.</h1>
+            <h1 class="title">Isaac's Story</h1>
             <h4>
-              Every landing page needs a small description after the big bold
+              반갑습니다. 백엔드 개발자 김이삭 입니다.
+              <!-- Every landing page needs a small description after the big bold
               title, that's why we added this text here. Add here all the
               information that can make you or your product create the first
-              impression.
+              impression. -->
             </h4>
             <br />
             <md-button
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://youtu.be/XsDtmwlp5D4"
               class="md-success md-lg"
               target="_blank"
               ><i class="fas fa-play"></i> Watch video</md-button
@@ -150,10 +151,10 @@
                       />
                     </div>
                     <h4 class="card-title">
-                      Carla Hortensia
+                      Isaac Kim
                       <br />
                       <small class="card-description text-muted"
-                        >Designer</small
+                        >Developer</small
                       >
                     </h4>
 
@@ -167,7 +168,7 @@
                     </md-card-content>
 
                     <md-card-actions class="text-center">
-                      <md-button
+                      <!-- <md-button
                         href="javascript:void(0)"
                         class="md-just-icon md-simple"
                       >
@@ -178,6 +179,18 @@
                         class="md-just-icon md-simple"
                       >
                         <i class="fab fa-linkedin"></i>
+                      </md-button> -->
+                      <md-button
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-instagram"></i>
+                      </md-button>
+                      <md-button
+                        href="javascript:void(0)"
+                        class="md-just-icon md-simple"
+                      >
+                        <i class="fab fa-facebook-square"></i>
                       </md-button>
                     </md-card-actions>
                   </md-card>
@@ -293,7 +306,7 @@ export default {
     },
     teamImg2: {
       type: String,
-      default: require("@/assets/img/faces/christian.jpg")
+      default: require("@/assets/img/faces/isak.jpg")
     },
     teamImg3: {
       type: String,

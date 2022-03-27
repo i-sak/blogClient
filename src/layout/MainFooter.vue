@@ -11,25 +11,25 @@
             <strong id="footerOwner"> Isaac's </strong>
           </li>
           <li>
-            <a href="https://lifere.tistory.com/">Tistory</a>
+            <a href="https://lifere.tistory.com/" target="_blank">Tistory</a>
             <!-- <a href="https://www.creative-tim.com">
               Creative Tim
             </a> -->
           </li>
           <li>
-            <a href="https://blog.naver.com/isaac7263">Naver</a>
+            <a href="https://blog.naver.com/isaac7263" target="_blank">Naver</a>
             <!-- <a href="https:///presentation.creative-tim.com">
               About Us
             </a> -->
           </li>
           <li>
-            <a href="https://github.com/i-sak">Github</a>
+            <a href="https://github.com/i-sak" target="_blank">Github</a>
             <!-- <a href="https:///blog.creative-tim.com">
               Blog
             </a> -->
           </li>
           <li>
-            <a href="https://smartstore.naver.com/topperfriends">Topper Friends</a>
+            <a href="https://smartstore.naver.com/topperfriends" target="_blank">Topper Friends</a>
             <!-- <a href="https://www.creative-tim.com/license">
               Licenses
             </a> -->
@@ -61,11 +61,10 @@ export default {
 };
 </script>
 <style>
-.copyright {
-  color : #c9c9c9;
-}
-.copyright a:visited {
-  color : #c9c9c9;
+div.copyright,
+div.copyright a,
+div.copyright a:visited {
+  color : #cccccc;
 }
 #footerOwner {
   font-weight: 900;

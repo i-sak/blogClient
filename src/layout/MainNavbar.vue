@@ -44,7 +44,7 @@
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
-                          <a href="#/">
+                          <a href="#/componentsAll">
                             <i class="material-icons">layers</i>
                             <p>All Components</p>
                           </a>
@@ -71,6 +71,10 @@
                  -->
               <md-list-item v-if="showDownload">
                 <p class="menuList"><router-link to="/blog">Blog</router-link></p>
+              </md-list-item>
+
+              <md-list-item v-if="showDownload">
+                <p class="menuList"><router-link to="/profile">Profile</router-link></p>
               </md-list-item>
 
               <!-- <md-list-item
@@ -113,13 +117,13 @@
                         data-toggle="dropdown"
                       >
                         <i class="material-icons">view_carousel</i>
-                        <p>Examples</p>
+                        <p>Pages</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
-                          <a href="#/landing">
+                          <a href="#/blog">
                             <i class="material-icons">view_day</i>
-                            <p>Landing Page</p>
+                            <p>Blog Page</p>
                           </a>
                         </li>
                         <li>
@@ -232,7 +236,7 @@ export default {
   },
   computed: {
     showDownload() {
-      const excludedRoutes = ["login", "landing", "profile"];
+      const excludedRoutes = ["login", "landing", "profile", "blog"];
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },

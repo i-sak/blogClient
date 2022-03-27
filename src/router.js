@@ -7,6 +7,8 @@ import Profile from "./views/Profile.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
 import ComponentsAll from "./views/ComponentsAll.vue";
+import Blog from "./views/Blog.vue";
+
 Vue.use(Router);
 
 export default new Router({
@@ -24,6 +26,15 @@ export default new Router({
       path: "/",
       name: "index",
       components: { default: Index, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
+    {
+      path: "/blog",
+      name: "blog",
+      components: { default: Blog, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
