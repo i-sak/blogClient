@@ -6,11 +6,20 @@ import Login from "./views/Login.vue";
 import Profile from "./views/Profile.vue";
 import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
-
+import ComponentsAll from "./views/ComponentsAll.vue";
 Vue.use(Router);
 
 export default new Router({
   routes: [
+    {
+      path: "/componentsAll",
+      name: "componentsAll",
+      components: { default: ComponentsAll, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
     {
       path: "/",
       name: "index",

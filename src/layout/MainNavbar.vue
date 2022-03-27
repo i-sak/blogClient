@@ -8,7 +8,7 @@
   >
     <div class="md-toolbar-row md-collapse-lateral">
       <div class="md-toolbar-section-start">
-        <h3 class="md-title">ISAAC WORLD</h3>
+        <h3 class="md-title" id="mainHeaderTitle"><router-link to="/">ISAAC WORLD</router-link></h3>
       </div>
       <div class="md-toolbar-section-end">
         <md-button
@@ -63,23 +63,42 @@
                 </a>
               </li>
 
-              <md-list-item
+              <!-- top menu navigator -->
+              
+              <!-- href="/"
+                target="_blank"
+                속성 제거 
+                 -->
+              <md-list-item v-if="showDownload">
+                <p class="menuList"><router-link to="/blog">Blog</router-link></p>
+              </md-list-item>
+
+              <!-- <md-list-item
+                href="https://github.com/i-sak"
+                target="_blank"
+                v-if="showDownload">
+                <p>Github</p>
+              </md-list-item> -->
+              
+              <!-- Document 개발 문서 -->
+              <!-- <md-list-item
                 href="https://demos.creative-tim.com/vue-material-kit/documentation/"
                 target="_blank"
                 v-if="showDownload"
               >
                 <i class="material-icons">content_paste</i>
                 <p>Documentation</p>
-              </md-list-item>
+              </md-list-item> -->
 
-              <md-list-item
+              <!-- 화면 최하단으로 이동 -->
+              <!-- <md-list-item
                 href="javascript:void(0)"
                 @click="scrollToElement()"
                 v-if="showDownload"
               >
                 <i class="material-icons">cloud_download</i>
                 <p>Download</p>
-              </md-list-item>
+              </md-list-item> -->
 
               <li class="md-list-item" v-else>
                 <a
@@ -120,8 +139,9 @@
                   </div>
                 </a>
               </li>
-
-              <md-list-item
+              
+              <!-- 트위터 -->
+              <!-- <md-list-item
                 href="https://twitter.com/CreativeTim"
                 target="_blank"
               >
@@ -130,8 +150,10 @@
                 <md-tooltip md-direction="bottom"
                   >Follow us on Twitter</md-tooltip
                 >
-              </md-list-item>
-              <md-list-item
+              </md-list-item> -->
+              
+              <!-- 페이스북 -->
+              <!-- <md-list-item
                 href="https://www.facebook.com/CreativeTim"
                 target="_blank"
               >
@@ -140,8 +162,10 @@
                 <md-tooltip md-direction="bottom"
                   >Like us on Facebook</md-tooltip
                 >
-              </md-list-item>
-              <md-list-item
+              </md-list-item> -->
+
+              <!-- 인스타그램 -->
+              <!-- <md-list-item
                 href="https://www.instagram.com/CreativeTimOfficial"
                 target="_blank"
               >
@@ -150,7 +174,8 @@
                 <md-tooltip md-direction="bottom"
                   >Follow us on Instagram</md-tooltip
                 >
-              </md-list-item>
+              </md-list-item> -->
+
             </md-list>
           </div>
         </div>
@@ -265,3 +290,12 @@ export default {
   }
 };
 </script>
+<style lang="css">
+  h3#mainHeaderTitle a {
+    font-weight: bold;
+    color :#cccccc;
+  }
+  p.menuList {
+    padding-top: 1vh;
+  }
+</style>

@@ -16,9 +16,7 @@
         </div>
       </div>
     </parallax>
-    
-    <!--  -->
-    <!--<div class="main main-raised">
+    <div class="main main-raised">
       <div class="section section-basic">
         <div class="container">
           <div class="title">
@@ -264,10 +262,7 @@
           </div>
         </div>
       </div>
-    </div>-->
-    <!--  -->
-
-    
+    </div>
   </div>
 </template>
 
@@ -284,15 +279,15 @@ import { LoginCard } from "@/components";
 
 export default {
   components: {
-    // BasicElements,
-    // Navigation,
-    // SmallNavigation,
-    // Tabs,
-    // NavPills,
-    // Notifications,
-    // TypographyImages,
-    // JavascriptComponents,
-    // LoginCard
+    BasicElements,
+    Navigation,
+    SmallNavigation,
+    Tabs,
+    NavPills,
+    Notifications,
+    TypographyImages,
+    JavascriptComponents,
+    LoginCard
   },
   name: "index",
   bodyClass: "index-page",
