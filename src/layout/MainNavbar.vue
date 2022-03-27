@@ -144,6 +144,62 @@
                 </a>
               </li>
               
+              <li class="md-list-item" v-if="!showDownload">
+                <a
+                  href="javascript:void(0)"
+                  class="md-list-item-router md-list-item-container md-button-clean dropdown"
+                >
+                <div class="md-list-item-content">
+                    <drop-down direction="down">
+                      <md-button
+                        slot="title"
+                        class="md-button md-button-link md-white md-simple dropdown-toggle"
+                        data-toggle="dropdown"
+                      >
+                        <i class="material-icons">category</i>
+                        <p>Category</p>
+                      </md-button>
+                      <ul class="dropdown-menu dropdown-with-icons">
+                        <li>
+                          <a href="#/blog">
+                            <i class="material-icons">article</i>
+                            <p>자유게시판</p>
+                          </a>
+                        </li>
+                        <li>
+                          <!-- login -->
+                          <a href="#/blog"> 
+                            <i class="material-icons">article</i>
+                            <p>Vue.js</p>
+                          </a>
+                        </li>
+                        <li>
+                          <!-- profile -->
+                          <a href="#/blog">
+                            <i class="material-icons">article</i>
+                            <p>Java</p>
+                          </a>
+                        </li>
+                        <li>
+                          <!-- profile -->
+                          <a href="#/blog">
+                            <i class="material-icons">article</i>
+                            <p>Database</p>
+                          </a>
+                        </li>
+                        <li>
+                          <!-- profile -->
+                          <a href="#/blog">
+                            <i class="material-icons">article</i>
+                            <p>Test</p>
+                          </a>
+                        </li>
+                      </ul>
+                    </drop-down>
+                  </div>
+                </a>
+              </li>
+
               <!-- 트위터 -->
               <!-- <md-list-item
                 href="https://twitter.com/CreativeTim"
