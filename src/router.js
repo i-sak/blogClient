@@ -8,20 +8,12 @@ import MainNavbar from "./layout/MainNavbar.vue";
 import MainFooter from "./layout/MainFooter.vue";
 import ComponentsAll from "./views/ComponentsAll.vue";
 import Blog from "./views/Blog.vue";
+import Board from "./views/Board.vue";
 
 Vue.use(Router);
 
 export default new Router({
   routes: [
-    {
-      path: "/componentsAll",
-      name: "componentsAll",
-      components: { default: ComponentsAll, header: MainNavbar, footer: MainFooter },
-      props: {
-        header: { colorOnScroll: 400 },
-        footer: { backgroundColor: "black" }
-      }
-    },
     {
       path: "/",
       name: "index",
@@ -32,9 +24,27 @@ export default new Router({
       }
     },
     {
+      path: "/componentsAll",
+      name: "componentsAll",
+      components: { default: ComponentsAll, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
+    {
       path: "/blog",
       name: "blog",
       components: { default: Blog, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
+    {
+      path: "/board",
+      name: "board",
+      components: { default: Board, header: MainNavbar, footer: MainFooter },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }

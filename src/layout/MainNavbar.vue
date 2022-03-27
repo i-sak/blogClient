@@ -160,40 +160,39 @@
                         <p>Category</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
-                        <li>
-                          <a href="#/blog">
+
+                        <!-- boardTypeArray -->
+                        <li v-for="(a, i) in boardTypeArray" :key="i">
+                          <router-link :to="{path : `/board`, query :{title : a}}"> 
+                          {{a}}
+                          </router-link>
+                          <!-- <a :href="'#/board?subject='+a">
+                            <i class="material-icons">article</i>
+                            <p>{{a}}</p>
+                          </a> -->
+                        </li>
+
+                        <!-- <li>
+                          <a href="#/board?subject=자유게시판">
                             <i class="material-icons">article</i>
                             <p>자유게시판</p>
                           </a>
                         </li>
+                        
                         <li>
-                          <!-- login -->
-                          <a href="#/blog"> 
+                          
+                          <a href="#/login"> 
                             <i class="material-icons">article</i>
-                            <p>Vue.js</p>
+                            <p>login</p>
                           </a>
                         </li>
                         <li>
-                          <!-- profile -->
-                          <a href="#/blog">
+                          
+                          <a href="#/profile">
                             <i class="material-icons">article</i>
-                            <p>Java</p>
+                            <p>profile</p>
                           </a>
-                        </li>
-                        <li>
-                          <!-- profile -->
-                          <a href="#/blog">
-                            <i class="material-icons">article</i>
-                            <p>Database</p>
-                          </a>
-                        </li>
-                        <li>
-                          <!-- profile -->
-                          <a href="#/blog">
-                            <i class="material-icons">article</i>
-                            <p>Test</p>
-                          </a>
-                        </li>
+                        </li> -->
                       </ul>
                     </drop-down>
                   </div>
@@ -287,12 +286,13 @@ export default {
   data() {
     return {
       extraNavClasses: "",
-      toggledClass: false
+      toggledClass: false,
+      boardTypeArray : ['자유게시판','Vue.js','Java','Database','Test'],
     };
   },
   computed: {
     showDownload() {
-      const excludedRoutes = ["login", "landing", "profile", "blog"];
+      const excludedRoutes = ["login", "landing", "profile", "blog",'board'];
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },
