@@ -24,12 +24,38 @@
           </div>
           <!-- <basic-elements></basic-elements> -->
           <div>
-            list
-          </div>
-          <div>
-            pagenation
-          </div>
+            
+            <table border="1">
+              <caption>테이블구조</caption>
+              <thead>
+                <tr>
+                  <td>No</td>
+                  <td>title</td>
+                  <td>writer</td>
+                  <td>writerTime</td>
+                </tr>
+              </thead>
 
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>게시판 목록은 이쁜 화면 참고해야겠다.</td>
+                  <td>글쓴이</td>
+                  <td>2022.03.29</td>
+                </tr>
+              </tbody>
+              
+              <tfoot>
+                <tr>
+                  <td>f1</td>
+                  <td>f2</td>
+                  <td>f3</td>
+                  <td>f4</td>
+                </tr>
+              </tfoot>
+            </table>
+            
+          </div>
         </div>
       </div>
 
