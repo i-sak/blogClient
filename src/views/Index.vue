@@ -10,7 +10,7 @@
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
               <h1>Isaac World</h1>
-              <h3>Isaac's Blog</h3>
+              <h3>PORTFOLIO.</h3>
             </div>
           </div>
         </div>

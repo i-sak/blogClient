@@ -27,7 +27,8 @@
               <!-- Here you can add your items from the section-start of your toolbar -->
             </mobile-menu>
             <md-list>
-              <li class="md-list-item" v-if="!showDownload">
+
+              <!-- <li class="md-list-item" v-if="!showDownload">
                 <a
                   href="javascript:void(0)"
                   class="md-list-item-router md-list-item-container md-button-clean dropdown"
@@ -61,7 +62,7 @@
                     </drop-down>
                   </div>
                 </a>
-              </li>
+              </li> -->
 
               <!-- top menu navigator -->
               
@@ -70,7 +71,7 @@
                 속성 제거 
                  -->
               <md-list-item v-if="showDownload">
-                <p class="menuList"><router-link to="/blog">Blog</router-link></p>
+                <p class="menuList"><router-link to="/landing">Landing Page</router-link></p>
               </md-list-item>
 
               <md-list-item v-if="showDownload">
@@ -121,9 +122,9 @@
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
                         <li>
-                          <a href="#/blog">
+                          <a href="#/landing">
                             <i class="material-icons">view_day</i>
-                            <p>Blog Page</p>
+                            <p>Landing Page</p>
                           </a>
                         </li>
                         <li>
@@ -157,7 +158,7 @@
                         data-toggle="dropdown"
                       >
                         <i class="material-icons">category</i>
-                        <p>Category</p>
+                        <p>board Category</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
 
