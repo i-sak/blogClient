@@ -8,7 +8,7 @@
           >
             <h1 class="title">Isaac's Story</h1>
             <h4>
-              Nice to meet you. My PortFolio Web Site.
+              Nice to meet you. This is my portfolio website.
               <!-- Every landing page needs a small description after the big bold
               title, that's why we added this text here. Add here all the
               information that can make you or your product create the first
@@ -18,9 +18,10 @@
             <md-button
               href="https://www.youtube.com/channel/UCpnu38d9yOk8rXhVb_Dc_5g"
               class="md-success md-lg"
-              target="_blank"
-              ><i class="fas fa-play"></i> Watch video</md-button
-            >
+              target="_blank">
+              <i class="fas fa-play"></i> 
+              Watch video
+            </md-button>
           </div>
         </div>
       </div>
@@ -32,19 +33,21 @@
             <div
               class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto text-center"
             >
-              <h2 class="title text-center">Let's talk</h2>
+              <h2 class="title text-center">Portfolio</h2>
               <h5 class="description">
-                This is the paragraph where you can write more details about
+                I like to study development and computer science.
+                I created this website to show documents and works produced while researching CS.
+                <!-- This is the paragraph where you can write more details about
                 your product. Keep you user engaged by providing meaningful
                 information. Remember that by this time, the user is curious,
                 otherwise he wouldn't scroll to get here. Add a button if you
-                want the user to see more.
+                want the user to see more. -->
               </h5>
             </div>
           </div>
           <div class="features text-center">
             <div class="md-layout">
-              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+              <!-- <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="info">
                   <div class="icon icon-info">
                     <md-icon>chat</md-icon>
@@ -56,8 +59,8 @@
                     feature will be enough.
                   </p>
                 </div>
-              </div>
-              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+              </div> -->
+              <!-- <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="info">
                   <div class="icon icon-success">
                     <md-icon>verified_user</md-icon>
@@ -69,8 +72,8 @@
                     feature will be enough.
                   </p>
                 </div>
-              </div>
-              <div class="md-layout-item md-medium-size-33 md-small-size-100">
+              </div> -->
+              <!-- <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="info">
                   <div class="icon icon-danger">
                     <md-icon>fingerprint</md-icon>
@@ -82,18 +85,18 @@
                     feature will be enough.
                   </p>
                 </div>
-              </div>
+              </div> -->
             </div>
           </div>
         </div>
       </div>
       <div class="section text-center">
         <div class="container">
-          <h2 class="title">Here is our team</h2>
+          <h2 class="title">Creator</h2>
           <div class="team">
             <div class="md-layout">
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                <div class="team-player">
+                <!-- <div class="team-player">
                   <md-card class="md-card-plain">
                     <div class="md-layout-item md-size-50 mx-auto">
                       <img
@@ -138,7 +141,7 @@
                       </md-button>
                     </md-card-actions>
                   </md-card>
-                </div>
+                </div> -->
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
                 <div class="team-player">
@@ -160,10 +163,16 @@
 
                     <md-card-content>
                       <p class="card-description">
-                        You can write here details about one of your team
+                        
+                        I love researching computer science and development, so I am constantly studying and documenting what I have studied. I'm Isaac Kim, a growing developer.
+                        <br><br>
+                        컴퓨터 과학과 개발을 연구하는 것을 좋아해서
+                        끊임없이 공부하고, 공부한 것을 기록하고 있습니다.
+                        성장하는 개발자 김이삭 입니다.
+                        <!-- You can write here details about one of your team
                         members. You can give more details about what they do.
                         Feel free to add some <a href="#">links</a> for people
-                        to be able to follow them outside the site.
+                        to be able to follow them outside the site. -->
                       </p>
                     </md-card-content>
 
@@ -181,14 +190,42 @@
                         <i class="fab fa-linkedin"></i>
                       </md-button> -->
                       <md-button
-                        href="javascript:void(0)"
+                        href="https://blog.naver.com/isaac7263"
                         class="md-just-icon md-simple"
+                        target="_blank"
+                      >
+                        <i class="fab fa-blogger"></i>
+                      </md-button>
+
+                      <md-button
+                        href="https://github.com/i-sak"
+                        class="md-just-icon md-simple"
+                        target="_blank"
+                      >
+                        <i class="fab fa-github"></i>
+                      </md-button>
+
+                      <md-button
+                        href="https://lifere.tistory.com/"
+                        class="md-just-icon md-simple"
+                        target="_blank"
+                      >
+                        <i class="fab fa-blogger"></i>
+                      </md-button>
+                      
+                      <!-- javascript:void(0) -->
+                      <md-button
+                        href="https://www.instagram.com/isaac.kim.dev/"
+                        class="md-just-icon md-simple"
+                        target="_blank"
                       >
                         <i class="fab fa-instagram"></i>
                       </md-button>
+                      
                       <md-button
-                        href="javascript:void(0)"
+                        href="https://www.facebook.com/profile.php?id=100003562823035"
                         class="md-just-icon md-simple"
+                        target="_blank"
                       >
                         <i class="fab fa-facebook-square"></i>
                       </md-button>
@@ -197,7 +234,7 @@
                 </div>
               </div>
               <div class="md-layout-item md-medium-size-33 md-small-size-100">
-                <div class="team-player">
+                <!-- <div class="team-player">
                   <md-card class="md-card-plain">
                     <div class="md-layout-item md-size-50 mx-auto">
                       <img
@@ -242,7 +279,7 @@
                       </md-button>
                     </md-card-actions>
                   </md-card>
-                </div>
+                </div> -->
               </div>
             </div>
           </div>

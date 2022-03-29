@@ -8,7 +8,7 @@
       <nav>
         <ul>
           <li>
-            <router-link to="/"><strong id="footerOwner"> ISAAC </strong></router-link>
+            <router-link to="/"><strong id="footerOwner"> Isaac's </strong></router-link>
           </li>
           <li>
             <a href="https://lifere.tistory.com/" target="_blank">Tistory</a>

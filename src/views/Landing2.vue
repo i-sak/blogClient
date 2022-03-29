@@ -1,4 +1,7 @@
 <template>
+  
+  <!-- 초기 파일 -->
+
   <div class="wrapper">
     <parallax class="section page-header header-filter" :style="headerStyle">
       <div class="container">
