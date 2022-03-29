@@ -32,15 +32,15 @@ export default new Router({
         footer: { backgroundColor: "black" }
       }
     },
-    // {
-    //   path: "/blog",
-    //   name: "blog",
-    //   components: { default: Blog, header: MainNavbar, footer: MainFooter },
-    //   props: {
-    //     header: { colorOnScroll: 400 },
-    //     footer: { backgroundColor: "black" }
-    //   }
-    // },
+    {
+      path: "/blog",
+      name: "blog",
+      components: { default: Blog, header: MainNavbar, footer: MainFooter },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
     {
       path: "/board",
       name: "board",

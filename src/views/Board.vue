@@ -10,7 +10,7 @@
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
               <h1>{{$route.query.title}}</h1>
-              <h3>Isaac's Blog</h3>
+              <h3>Board</h3>
             </div>
           </div>
         </div>
@@ -20,11 +20,20 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2>Basic Elements</h2>
+            <h1>{{this.$route.query.title}} 목록</h1>
           </div>
-          <basic-elements></basic-elements>
+          <!-- <basic-elements></basic-elements> -->
+          <div>
+            list
+          </div>
+          <div>
+            pagenation
+          </div>
+
         </div>
       </div>
+
+<!--       
       <div class="section section-navbars">
         <div class="container">
           <small-navigation></small-navigation>
@@ -262,6 +271,8 @@
           </div>
         </div>
       </div>
+       -->
+
     </div>
   </div>
 </template>
@@ -279,15 +290,15 @@ import { LoginCard } from "@/components";
 
 export default {
   components: {
-    BasicElements,
-    Navigation,
-    SmallNavigation,
-    Tabs,
-    NavPills,
-    Notifications,
-    TypographyImages,
-    JavascriptComponents,
-    LoginCard
+    // BasicElements,
+    // Navigation,
+    // SmallNavigation,
+    // Tabs,
+    // NavPills,
+    // Notifications,
+    // TypographyImages,
+    // JavascriptComponents,
+    // LoginCard
   },
   name: "board",
   bodyClass: "index-page",
