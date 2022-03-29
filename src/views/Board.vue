@@ -26,7 +26,7 @@
           <div>
             
             <table border="1">
-              <caption>테이블구조</caption>
+              <caption>TEST 입니다. 적절히 이쁜 목록을 찾아야 함.</caption>
               <thead>
                 <tr>
                   <td>No</td>

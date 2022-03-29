@@ -290,14 +290,16 @@
         <div class="container">
           <div class="md-layout">
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
-              <h2 class="text-center title">Work with us</h2>
+              <h2 class="text-center title">Work with me</h2>
               <h4 class="text-center description">
-                Divide details about your product or agency work into parts.
+                Contact me
+                <!-- Divide details about your product or agency work into parts.
                 Write a few lines about each one and contact us about any
                 further collaboration. We will responde get back to you in a
-                couple of hours.
+                couple of hours. -->
               </h4>
-              <form class="contact-form">
+              <form class="contact-form"
+                @submit.prevent="sendEmail">
                 <div class="md-layout">
                   <div class="md-layout-item md-size-50">
                     <md-field>
@@ -318,7 +320,7 @@
                 </md-field>
                 <div class="md-layout">
                   <div class="md-layout-item md-size-33 mx-auto text-center">
-                    <md-button class="md-success">Send Message</md-button>
+                    <md-button type="submit" class="md-success">Send Message</md-button>
                   </div>
                 </div>
               </form>
@@ -331,6 +333,10 @@
 </template>
 
 <script>
+import emailjs from '@emailjs/browser';
+import{ init } from '@emailjs/browser';
+init("AjU_EyRvJpHTVZH3b");
+
 export default {
   bodyClass: "landing-page",
   props: {
@@ -358,6 +364,23 @@ export default {
       email: null,
       message: null
     };
+  },
+  methods: {
+    sendEmail() {
+      var obj = {
+        to_name : 'isaac',
+        email :  this.email,
+        message :  this.message,
+        from_name : this.name
+        }
+        
+      emailjs.send('service_czngeek', 'template_5x2iinb', obj)
+        .then((result) => {
+            console.log('SUCCESS!', result.text);
+        }, (error) => {
+            console.log('FAILED...', error.text);
+        });
+    }
   },
   computed: {
     headerStyle() {
