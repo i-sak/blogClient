@@ -286,13 +286,32 @@
           </div>
         </div>
       </div>
+
+      <!-- <div class="alert alert-success">
+        <div class="container">
+          <button
+            type="button"
+            aria-hidden="true"
+            class="close"
+            @click="event => removeNotify(event, 'alert-success')"
+          >
+            <md-icon>clear</md-icon>
+          </button>
+          <div class="alert-icon">
+            <md-icon>check</md-icon>
+          </div>
+
+          <b> SUCCESS ALERT </b> : Isaac님께 메일 전송 완료!
+        </div>
+      </div> -->
+
       <div class="section section-contacts">
         <div class="container">
           <div class="md-layout">
             <div class="md-layout-item md-size-66 md-xsmall-size-100 mx-auto">
               <h2 class="text-center title">Work with me</h2>
               <h4 class="text-center description">
-                Contact me
+                Contact me. We will get back to you in a few hours.
                 <!-- Divide details about your product or agency work into parts.
                 Write a few lines about each one and contact us about any
                 further collaboration. We will responde get back to you in a
@@ -304,19 +323,19 @@
                   <div class="md-layout-item md-size-50">
                     <md-field>
                       <label>Your Name</label>
-                      <md-input v-model="name" type="text"></md-input>
+                      <md-input v-model="name" type="text" ref="name"></md-input>
                     </md-field>
                   </div>
                   <div class="md-layout-item md-size-50">
                     <md-field>
                       <label>Your Email</label>
-                      <md-input v-model="email" type="email"></md-input>
+                      <md-input v-model="email" type="email" ref="email"></md-input>
                     </md-field>
                   </div>
                 </div>
                 <md-field maxlength="5">
                   <label>Your Message</label>
-                  <md-textarea v-model="message"></md-textarea>
+                  <md-textarea v-model="message" ref="message"></md-textarea>
                 </md-field>
                 <div class="md-layout">
                   <div class="md-layout-item md-size-33 mx-auto text-center">
@@ -335,6 +354,7 @@
 <script>
 import emailjs from '@emailjs/browser';
 import{ init } from '@emailjs/browser';
+var initVar;
 init("AjU_EyRvJpHTVZH3b");
 
 export default {
@@ -362,25 +382,56 @@ export default {
     return {
       name: null,
       email: null,
-      message: null
+      message: null,
     };
   },
   methods: {
     sendEmail() {
+      if (!this.checkFormInputForContactMe()) return;
+      
       var obj = {
         to_name : 'isaac',
+        from_name : this.name,
         email :  this.email,
-        message :  this.message,
-        from_name : this.name
-        }
-        
+        message :  this.message
+      }
       emailjs.send('service_czngeek', 'template_5x2iinb', obj)
         .then((result) => {
             console.log('SUCCESS!', result.text);
+            this.name = ''
+            this.email = ''
+            this.message = ''
+            alert('Isaac님께 메일 전송 완료!');
         }, (error) => {
             console.log('FAILED...', error.text);
         });
+    },
+
+    removeNotify(e, notifyClass) {
+      var target = e.target;
+      while (target.className.indexOf(notifyClass) === -1) {
+        target = target.parentNode;
+      }
+      return target.parentNode.removeChild(target);
+    },
+
+    // [CHECK] Form input for Contact me 
+    checkFormInputForContactMe() {
+      if(this.name == '' || this.name == null) {
+        alert('Name을 입력해주세요.');
+        this.$refs.name.$el.focus()
+        return false;
+      } else if (this.email == '' || this.email == null) {
+        alert('Email을 입력해주세요.');
+        this.$refs.email.$el.focus()
+        return false;
+      } else if (this.message == '' || this.message == null) {
+        alert('Message를 입력해주세요.');
+        this.$refs.message.$el.focus()
+        return false;
+      } else return true;
     }
+
   },
   computed: {
     headerStyle() {

@@ -17,51 +17,68 @@
       </div>
     </parallax>
     
-    <!--  -->
-    <!--<div class="main main-raised">
-      <div class="section section-basic">
+    
+    <div class="main main-raised">
+      <div class="section">
+        <div class="container">
+          <div class="title">
+            <h1>Portfolio</h1>
+          </div>
+        </div>
+      </div>
+      
+      <div class="section section-javascript">
+        <div class="container">
+          <CarouselSection />
+        </div>
+      </div>
+
+      <!-- <div class="section section-basic">
         <div class="container">
           <div class="title">
             <h2>Basic Elements</h2>
           </div>
           <basic-elements></basic-elements>
         </div>
-      </div>
-      <div class="section section-navbars">
+      </div> -->
+
+      <!-- <div class="section section-navbars">
         <div class="container">
           <small-navigation></small-navigation>
         </div>
         <navigation></navigation>
-      </div>
-      <div class="section section-tabs">
+      </div> -->
+
+      <!-- <div class="section section-tabs">
         <div class="container">
           <tabs></tabs>
         </div>
-      </div>
-      <div class="section section-white">
+      </div> -->
+      <!-- <div class="section section-white">
         <div class="container">
           <nav-pills></nav-pills>
         </div>
-      </div>
-      <div class="section section-notifications">
+      </div> -->
+      <!-- <div class="section section-notifications">
         <div class="container">
           <div class="title">
             <h3>Notifications</h3>
           </div>
         </div>
         <notifications></notifications>
-      </div>
-      <div class="section">
+      </div> -->
+      <!-- <div class="section">
         <div class="container">
           <typography-images></typography-images>
         </div>
-      </div>
-      <div class="section section-javascript">
+      </div> -->
+      <!-- <div class="section section-javascript">
         <div class="container">
           <javascript-components></javascript-components>
         </div>
-      </div>
-      <div class="section">
+      </div> -->
+
+      <!-- <div class="section">
         <div class="container text-center">
           <div class="md-layout">
             <div
@@ -77,8 +94,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="section section-signup page-header" :style="signupImage">
+      </div> -->
+
+      <!-- <div class="section section-signup page-header" :style="signupImage">
         <div class="container">
           <div class="md-layout">
             <div
@@ -130,15 +148,17 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="md-layout">
+      </div> -->
+
+      <!-- <div class="md-layout">
         <div class="md-layout-item text-center">
           <md-button href="#/login" class="md-simple md-success md-lg"
             >View Login Page</md-button
           >
         </div>
-      </div>
-      <div class="section section-examples">
+      </div> -->
+
+      <!-- <div class="section section-examples">
         <div class="container-fluid text-center">
           <div class="md-layout">
             <div class="md-layout-item">
@@ -167,8 +187,9 @@
             </div>
           </div>
         </div>
-      </div>
-      <div class="section section-download" id="downloadSection">
+      </div> -->
+
+      <!-- <div class="section section-download" id="downloadSection">
         <div class="container">
           <div class="md-layout text-center">
             <div class="md-layout-item md-size-66 md-small-size-100 mx-auto">
@@ -262,11 +283,11 @@
               ><i class="fab fa-github"></i> Star</md-button
             >
           </div>
-        </div>
-      </div>
-    </div>-->
-    <!--  -->
 
+        </div>
+      </div> -->
+
+    </div>
     
   </div>
 </template>
@@ -281,6 +302,7 @@ import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
+import CarouselSection from './components/CarouselSection.vue';
 
 export default {
   components: {
@@ -292,7 +314,8 @@ export default {
     // Notifications,
     // TypographyImages,
     // JavascriptComponents,
-    // LoginCard
+    // LoginCard,
+    CarouselSection
   },
   name: "index",
   bodyClass: "index-page",
