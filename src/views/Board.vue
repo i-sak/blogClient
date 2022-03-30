@@ -20,42 +20,11 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h1>{{this.$route.query.title}} 목록</h1>
+            <h3>{{this.$route.query.title}} 목록</h3>
           </div>
-          <!-- <basic-elements></basic-elements> -->
-          <div>
-            
-            <table border="1">
-              <caption>TEST 입니다. 적절히 이쁜 목록을 찾아야 함.</caption>
-              <thead>
-                <tr>
-                  <td>No</td>
-                  <td>title</td>
-                  <td>writer</td>
-                  <td>writerTime</td>
-                </tr>
-              </thead>
+          <BoardList></BoardList>
 
-              <tbody>
-                <tr>
-                  <td>1</td>
-                  <td>게시판 목록은 이쁜 화면 참고해야겠다.</td>
-                  <td>글쓴이</td>
-                  <td>2022.03.29</td>
-                </tr>
-              </tbody>
-              
-              <tfoot>
-                <tr>
-                  <td>f1</td>
-                  <td>f2</td>
-                  <td>f3</td>
-                  <td>f4</td>
-                </tr>
-              </tfoot>
-            </table>
-            
-          </div>
+          
         </div>
       </div>
 
@@ -313,7 +282,7 @@ import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
-
+import BoardList from "./components/BoardListSection.vue"
 export default {
   components: {
     // BasicElements,
@@ -325,6 +294,7 @@ export default {
     // TypographyImages,
     // JavascriptComponents,
     // LoginCard
+    BoardList
   },
   name: "board",
   bodyClass: "index-page",

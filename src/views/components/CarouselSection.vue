@@ -145,7 +145,7 @@
       <!-- <br /> -->
 
       <div class="title">
-        <h3>Carousel</h3>
+        <h3>Works</h3>
       </div>
       <div class="md-layout">
         <div class="md-layout-item md-size-66 mx-auto md-small-size-100">
@@ -165,28 +165,29 @@
                 <div class="carousel-caption">
                   <h4>
                     <md-icon>location_on</md-icon>
-                    Somewhere Beyond, United States
+                    Portfolio Page v2
                   </h4>
                 </div>
-                <img :src="carousel1" alt="carousel1" />
+                <img :src="imgCapGithubMe" alt="carousel1" @click="redirectGithubMe" />
+                
               </slide>
               <slide>
                 <div class="carousel-caption">
                   <h4>
                     <md-icon>location_on</md-icon>
-                    Yellowstone National Park, United States
+                    Blog Tistory
                   </h4>
                 </div>
-                <img :src="carousel2" alt="carousel2" />
+                <img :src="imgCapTistory" alt="carousel2" @click="redirectTistory" />
               </slide>
               <slide>
                 <div class="carousel-caption">
                   <h4>
                     <md-icon>location_on</md-icon>
-                    Yellowstone National Park, United States
+                    Blog Naver
                   </h4>
                 </div>
-                <img :src="carousel3" alt="carousel3" />
+                <img :src="imgCapNaver" alt="carousel3" @click="redirectNaver" />
               </slide>
             </carousel>
           </md-card>
@@ -208,13 +209,26 @@ export default {
       selectedDate: new Date("2018/03/26"),
       carousel1: require("@/assets/img/nature-2.jpg"),
       carousel2: require("@/assets/img/nature.jpg"),
-      carousel3: require("@/assets/img/nature-3.jpg")
+      carousel3: require("@/assets/img/nature-3.jpg"),
+      imgCapGithubMe: require("@/assets/img/github_me.png"),
+      imgCapTistory : require("@/assets/img/blogTistory.png"),
+      imgCapNaver : require("@/assets/img/blogNaver.png"),
     };
   },
   methods: {
     classicModalHide() {
       this.classicModal = false;
+    },
+    redirectGithubMe() {
+      window.open('https://i-sak.github.io/me/','_blank')
+    },
+    redirectTistory () {
+      window.open('https://lifere.tistory.com/','_blank')
+    },
+    redirectNaver () {
+      window.open('https://blog.naver.com/isaac7263','_blank')
     }
   }
+
 };
 </script>

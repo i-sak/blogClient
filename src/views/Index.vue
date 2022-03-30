@@ -17,21 +17,17 @@
       </div>
     </parallax>
     
-    
     <div class="main main-raised">
       <div class="section">
         <div class="container">
+          
           <div class="title">
             <h1>Portfolio</h1>
           </div>
+          <CarouselSection />          
         </div>
       </div>
-      
-      <div class="section section-javascript">
-        <div class="container">
-          <CarouselSection />
-        </div>
-      </div>
+
 
       <!-- <div class="section section-basic">
         <div class="container">
