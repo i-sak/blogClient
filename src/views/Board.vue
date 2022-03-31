@@ -17,17 +17,75 @@
       </div>
     </parallax>
     <div class="main main-raised">
+
+      <!-- <div class="section">
+        <div class="container text-center">
+          <div class="md-layout">
+            <div
+              class="md-layout-item md-size-66 md-xsmall-size-100 ml-auto mr-auto text-center"
+            >
+              <h2>Completed with examples</h2>
+              <h4>
+                The kit comes with three pre-built pages to help you get started
+                faster. You can change the text and images and you're good to
+                go. More importantly, looking at them will give you a picture of
+                what you can built with this powerful kit.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h3>{{this.$route.query.title}} 목록</h3>
+            <h2>{{this.$route.query.title}} 목록</h2>
           </div>
-          <BoardList></BoardList>
+          <div class="md-layout">
+            <div
+              class="md-layout-item md-size-100 md-xsmall-size-100 ml-auto mr-auto text-left"
+            >
+              <!-- <h2>Completed with examples</h2>
+              <h4>
+                The kit comes with three pre-built pages to help you get started
+                faster. You can change the text and images and you're good to
+                go. More importantly, looking at them will give you a picture of
+                what you can built with this powerful kit.
+              </h4>
+               -->
+              <table>
+                <tr class="boardListRow" style="word-break : break-all;">
+                  <td class="boardListRowRightTd">
+                    
+                    <div class="boardRowDetailTitle">
+                      <h4>자유게시판 제목 입니다.</h4>
+                    </div>
+                    <div class="boardRowDetailContents">
+                      <p>
+                        내용 : asndjasdnjnjk nasdkjnjkasasfasfasfasf asd
+                      </p>
+                    </div>
+                    <div class="boardRowDetailInfo">
+                      <p>작성자 | 시간</p>
+                    </div>
+                  
+                  </td>
+                  <td class="boardListRowLeftTd">
+                    asdasd
+                  </td>
+                </tr>
+              </table>
 
+            </div>
+          </div>
           
+          <!-- <BoardList></BoardList> -->
+
         </div>
       </div>
+      
 
+      
 <!--       
       <div class="section section-navbars">
         <div class="container">
@@ -266,8 +324,7 @@
           </div>
         </div>
       </div>
-       -->
-
+       -->      
     </div>
   </div>
 </template>
@@ -294,7 +351,8 @@ export default {
     // TypographyImages,
     // JavascriptComponents,
     // LoginCard
-    BoardList
+
+    // BoardList
   },
   name: "board",
   bodyClass: "index-page",
@@ -384,4 +442,23 @@ export default {
     display: flex;
   }
 }
+
+.boardListRow {
+  
+}
+.boardListRowRightTd {
+  background: skyblue;
+  width: 80vw;
+}
+.boardListRowLeftTd {
+  background: greenyellow;
+  width: 20vw;
+}
+
+.boardRowDetailTitle h4,
+.boardRowDetailContents p,
+.boardRowDetailInfo p {
+  margin: 0; padding : 0;
+}
+
 </style>
