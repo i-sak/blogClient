@@ -34,12 +34,12 @@
               Licenses
             </a> -->
           </li>
-          <li>
+          <!-- <li>
             <router-link to="/componentsAll">componentsAll</router-link>
           </li>
           <li>
             <a href="https://demos.creative-tim.com/vue-material-kit/documentation/" target="_blank">DOCUMENTATION</a>
-          </li>
+          </li> -->
         </ul>
       </nav>
       <!-- <div class="copyright">

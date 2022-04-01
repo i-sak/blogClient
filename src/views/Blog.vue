@@ -10,13 +10,66 @@
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
               <h1>{{$route.query.title}}</h1>
-              <h3>Isaac's Blog</h3>
+              <h3>Blog</h3>
             </div>
           </div>
         </div>
       </div>
     </parallax>
     <div class="main main-raised">
+
+      <div class="section section-basic">
+        <div class="container">
+          <div class="title">
+            <h2>{{this.$route.query.title}} 목록</h2>
+            <div class="boardButtonSpace">
+              <md-button class="md-primary md-round">글쓰기</md-button>
+            </div>
+          </div>
+          <div class="md-layout">
+            <div
+              class="md-layout-item md-size-100 md-xsmall-size-100 ml-auto mr-auto text-left"
+            >
+              <!-- <h2>Completed with examples</h2>
+              <h4>
+                The kit comes with three pre-built pages to help you get started
+                faster. You can change the text and images and you're good to
+                go. More importantly, looking at them will give you a picture of
+                what you can built with this powerful kit.
+              </h4>
+               -->
+              <table>
+                <tr v-for="a in 5" :key="a"
+                class="boardListRow" style="word-break : break-all;">
+                  <td class="boardListRowRightTd">
+                    
+                    <div class="boardRowDetailTitle">
+                      <h4>블로그 제목 입니다. TEST TEST TEST</h4>
+                    </div>
+                    <div class="boardRowDetailContents">
+                      <p>
+                        내용 미리보기 TEST TEST TEST TEST TEST TEST TEST TEST
+                      </p>
+                    </div>
+                    <div class="boardRowDetailInfo">
+                      <p>김이삭 2022.04.01</p>
+                    </div>
+                  
+                  </td>
+                  <td class="boardListRowLeftTd">
+                    <img :src="imageTest" alt="imageTest">
+                  </td>
+                </tr>
+              </table>
+
+            </div>
+          </div>
+          
+          <!-- <BoardList></BoardList> -->
+
+        </div>
+      </div>
+
       <!-- <div class="section section-basic">
         <div class="container">
           <div class="title">
@@ -333,6 +386,7 @@ export default {
       password: null,
       leafShow: false,
       subject : 'Category',
+      imageTest : require("@/assets/img/faces/isak.jpg")
     };
   },
   methods: {
@@ -376,5 +430,28 @@ export default {
   .btn-container {
     display: flex;
   }
+}
+
+
+/** 목록관련 */
+.boardListRow {
+  
+}
+.boardListRowRightTd {
+  // background: skyblue;
+  width: 88vw;
+}
+.boardListRowLeftTd {
+  // background: greenyellow;
+  width: 12vw;
+}
+
+.boardRowDetailTitle h4,
+.boardRowDetailContents p,
+.boardRowDetailInfo p {
+  margin: 0; padding : 0;
+}
+.boardButtonSpace {
+  text-align : right;
 }
 </style>

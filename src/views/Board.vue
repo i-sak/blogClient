@@ -449,16 +449,17 @@ export default {
   }
 }
 
+/** 목록관련 */
 .boardListRow {
   
 }
 .boardListRowRightTd {
   // background: skyblue;
-  width: 85vw;
+  width: 88vw;
 }
 .boardListRowLeftTd {
   // background: greenyellow;
-  width: 15vw;
+  width: 12vw;
 }
 
 .boardRowDetailTitle h4,
