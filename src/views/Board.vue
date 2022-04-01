@@ -40,6 +40,9 @@
         <div class="container">
           <div class="title">
             <h2>{{this.$route.query.title}} 목록</h2>
+            <div class="boardButtonSpace">
+              <md-button class="md-primary md-round">글쓰기</md-button>
+            </div>
           </div>
           <div class="md-layout">
             <div
@@ -54,24 +57,25 @@
               </h4>
                -->
               <table>
-                <tr class="boardListRow" style="word-break : break-all;">
+                <tr v-for="a in 5" :key="a"
+                class="boardListRow" style="word-break : break-all;">
                   <td class="boardListRowRightTd">
                     
                     <div class="boardRowDetailTitle">
-                      <h4>자유게시판 제목 입니다.</h4>
+                      <h4>자유게시판 제목 입니다. TEST TEST TEST</h4>
                     </div>
                     <div class="boardRowDetailContents">
                       <p>
-                        내용 : asndjasdnjnjk nasdkjnjkasasfasfasfasf asd
+                        내용 미리보기 TEST TEST TEST TEST TEST TEST TEST TEST
                       </p>
                     </div>
                     <div class="boardRowDetailInfo">
-                      <p>작성자 | 시간</p>
+                      <p>김이삭 2022.04.01</p>
                     </div>
                   
                   </td>
                   <td class="boardListRowLeftTd">
-                    asdasd
+                    <img :src="imageTest" alt="imageTest">
                   </td>
                 </tr>
               </table>
@@ -397,7 +401,9 @@ export default {
       email: null,
       password: null,
       leafShow: false,
+
       subject : 'Category',
+      imageTest : require("@/assets/img/faces/isak.jpg")
     };
   },
   methods: {
@@ -447,12 +453,12 @@ export default {
   
 }
 .boardListRowRightTd {
-  background: skyblue;
-  width: 80vw;
+  // background: skyblue;
+  width: 85vw;
 }
 .boardListRowLeftTd {
-  background: greenyellow;
-  width: 20vw;
+  // background: greenyellow;
+  width: 15vw;
 }
 
 .boardRowDetailTitle h4,
@@ -460,5 +466,7 @@ export default {
 .boardRowDetailInfo p {
   margin: 0; padding : 0;
 }
-
+.boardButtonSpace {
+  text-align : right;
+}
 </style>
