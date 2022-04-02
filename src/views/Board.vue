@@ -9,7 +9,7 @@
             <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow" />
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
-              <h1>{{$route.query.title}}</h1>
+              <h2 id="title">{{ $route.query.title }}</h2>
               <h3>Board</h3>
             </div>
           </div>
@@ -17,7 +17,6 @@
       </div>
     </parallax>
     <div class="main main-raised">
-
       <!-- <div class="section">
         <div class="container text-center">
           <div class="md-layout">
@@ -39,7 +38,7 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2>{{this.$route.query.title}} 목록</h2>
+            <h2>{{ this.$route.query.title }} 목록</h2>
             <div class="boardButtonSpace">
               <md-button class="md-primary md-round">글쓰기</md-button>
             </div>
@@ -57,40 +56,33 @@
               </h4>
                -->
               <table>
-                <tr v-for="a in 5" :key="a"
-                class="boardListRow" style="word-break : break-all;">
+                <tr v-for="a in 5" :key="a" class="boardListRow">
                   <td class="boardListRowRightTd">
-                    
                     <div class="boardRowDetailTitle">
-                      <h4>자유게시판 제목 입니다. TEST TEST TEST</h4>
+                      <h4>
+                        <strong>자유게시판 제목 입니다. TEST TEST TEST</strong>
+                      </h4>
                     </div>
                     <div class="boardRowDetailContents">
                       <p>
-                        내용 미리보기 TEST TEST TEST TEST TEST TEST TEST TEST
+                        내용 미리보기 TEST TEST TEST TEST TEST TEST TEST
                       </p>
                     </div>
                     <div class="boardRowDetailInfo">
                       <p>김이삭 2022.04.01</p>
                     </div>
-                  
                   </td>
                   <td class="boardListRowLeftTd">
-                    <img :src="imageTest" alt="imageTest">
+                    <img :src="imageTest" alt="imageTest" />
                   </td>
                 </tr>
               </table>
-
             </div>
           </div>
-          
           <!-- <BoardList></BoardList> -->
-
         </div>
       </div>
-      
-
-      
-<!--       
+      <!--       
       <div class="section section-navbars">
         <div class="container">
           <small-navigation></small-navigation>
@@ -328,7 +320,7 @@
           </div>
         </div>
       </div>
-       -->      
+       -->
     </div>
   </div>
 </template>
@@ -343,7 +335,7 @@ import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
-import BoardList from "./components/BoardListSection.vue"
+import BoardList from "./components/BoardListSection.vue";
 export default {
   components: {
     // BasicElements,
@@ -355,7 +347,6 @@ export default {
     // TypographyImages,
     // JavascriptComponents,
     // LoginCard
-
     // BoardList
   },
   name: "board",
@@ -392,8 +383,7 @@ export default {
     profile: {
       type: String,
       default: require("@/assets/img/profile.jpg")
-    },
-    
+    }
   },
   data() {
     return {
@@ -401,9 +391,8 @@ export default {
       email: null,
       password: null,
       leafShow: false,
-
-      subject : 'Category',
-      imageTest : require("@/assets/img/faces/isak.jpg")
+      subject: "Category",
+      imageTest: require("@/assets/img/faces/isak.jpg")
     };
   },
   methods: {
@@ -447,11 +436,18 @@ export default {
   .btn-container {
     display: flex;
   }
+  .brand #title {
+    font-size: 500%;
+  }
+}
+/** header title */
+.brand #title {
+  font-weight: bold;
 }
 
 /** 목록관련 */
 .boardListRow {
-  
+  word-break: break-all;
 }
 .boardListRowRightTd {
   // background: skyblue;
@@ -465,9 +461,10 @@ export default {
 .boardRowDetailTitle h4,
 .boardRowDetailContents p,
 .boardRowDetailInfo p {
-  margin: 0; padding : 0;
+  margin: 0;
+  padding: 0;
 }
 .boardButtonSpace {
-  text-align : right;
+  text-align: right;
 }
 </style>
