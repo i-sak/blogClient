@@ -435,6 +435,8 @@ export default {
     }
   },
   mounted() {
+    // let url = window.location.hash;
+    // console.log(url)
     this.leafActive();
     window.addEventListener("resize", this.leafActive);
   },

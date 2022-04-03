@@ -10,17 +10,35 @@
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
               <h2 id="title">{{ $route.query.title }}</h2>
-              <h3>Blog</h3>
+              <h3>Board</h3>
             </div>
           </div>
         </div>
       </div>
     </parallax>
     <div class="main main-raised">
+      <!-- <div class="section">
+        <div class="container text-center">
+          <div class="md-layout">
+            <div
+              class="md-layout-item md-size-66 md-xsmall-size-100 ml-auto mr-auto text-center"
+            >
+              <h2>Completed with examples</h2>
+              <h4>
+                The kit comes with three pre-built pages to help you get started
+                faster. You can change the text and images and you're good to
+                go. More importantly, looking at them will give you a picture of
+                what you can built with this powerful kit.
+              </h4>
+            </div>
+          </div>
+        </div>
+      </div> -->
+
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2>{{ this.$route.query.title }} 목록</h2>
+            <h3>{{ this.$route.query.title }} 목록</h3>
             <div class="boardButtonSpace">
               <md-button class="md-primary md-round">글쓰기</md-button>
             </div>
@@ -37,14 +55,12 @@
                 what you can built with this powerful kit.
               </h4>
                -->
-              <table>
+              <table border="1">
                 <tr v-for="a in 5" :key="a" class="boardListRow">
                   <td class="boardListRowRightTd">
                     <div class="boardRowDetailTitle">
                       <h4>
-                        <strong
-                          >블로그 제목 입니다. TEST TEST TEST test TE</strong
-                        >
+                        <strong>자유게시판 제목 입니다. TEST TEST TEST</strong>
                       </h4>
                     </div>
                     <div class="boardRowDetailContents">
@@ -79,14 +95,7 @@
           <!-- <BoardList></BoardList> -->
         </div>
       </div>
-      <!-- <div class="section section-basic">
-        <div class="container">
-          <div class="title">
-            <h2>Basic Elements</h2>
-          </div>
-          <basic-elements></basic-elements>
-        </div>
-      </div>
+      <!--       
       <div class="section section-navbars">
         <div class="container">
           <small-navigation></small-navigation>
@@ -323,7 +332,8 @@
             >
           </div>
         </div>
-      </div> -->
+      </div>
+       -->
     </div>
   </div>
 </template>
@@ -338,6 +348,7 @@ import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
+import BoardList from "./components/BoardListSection.vue";
 import { Pagination } from "@/components";
 
 export default {
@@ -351,6 +362,7 @@ export default {
     // TypographyImages,
     // JavascriptComponents,
     // LoginCard
+    // BoardList
     Pagination
   },
   name: "board",
@@ -446,25 +458,28 @@ export default {
     font-size: 500%;
   }
 }
-
 /** header title */
 .brand #title {
   font-weight: bold;
 }
 
 /** 목록관련 */
+table {
+  border-collapse: collapse;
+  border-top: 0px solid white;
+  border-left: 0px solid white;
+  border-right: 0px solid white;
+  border-bottom: 1px solid lightgray;
+}
 .boardListRow {
   word-break: break-all;
 }
 .boardListRowRightTd {
-  // background: skyblue;
   width: 88vw;
 }
 .boardListRowLeftTd {
-  // background: greenyellow;
   width: 12vw;
 }
-
 .boardRowDetailTitle h4,
 .boardRowDetailContents p,
 .boardRowDetailInfo p {
@@ -479,7 +494,7 @@ div#pagination {
   justify-content: center;
 }
 span.prevNextButton {
-  padding: 3px;
+  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
   margin: auto;

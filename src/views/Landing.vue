@@ -35,8 +35,9 @@
             >
               <h2 class="title text-center">Portfolio</h2>
               <h5 class="description">
-                I like to study development and computer science.
-                I created this website to show documents and works produced while researching CS.
+                I like to study development and computer science.I created this
+                website to show documents and works produced while researching
+                This site contains blog and bulletin board features.
                 <!-- This is the paragraph where you can write more details about
                 your product. Keep you user engaged by providing meaningful
                 information. Remember that by this time, the user is curious,
