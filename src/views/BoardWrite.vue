@@ -9,7 +9,7 @@
             <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow" />
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
-              <h2 id="title">{{ $route.query.title }}</h2>
+              <h2 id="title">글쓰기</h2>
               <h3>Board</h3>
             </div>
           </div>
@@ -38,12 +38,7 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h3>{{ this.$route.query.title }} 목록</h3>
-            <div class="boardButtonSpace">
-              <md-button class="md-primary md-round" @click="movePageBoardWrite"
-                >글쓰기</md-button
-              >
-            </div>
+            <h3>글쓰기</h3>
           </div>
           <div class="md-layout">
             <div
@@ -58,40 +53,8 @@
               </h4>
                -->
               <table border="1">
-                <tr v-for="a in 5" :key="a" class="boardListRow">
-                  <td class="boardListRowRightTd">
-                    <div class="boardRowDetailTitle">
-                      <h4>
-                        <strong>자유게시판 제목 입니다. TEST TEST TEST</strong>
-                      </h4>
-                    </div>
-                    <div class="boardRowDetailContents">
-                      <p>
-                        내용 미리보기 TEST TEST TEST TEST TEST TEST TEST
-                      </p>
-                    </div>
-                    <div class="boardRowDetailInfo">
-                      <p>김이삭 2022.04.01</p>
-                    </div>
-                  </td>
-                  <td class="boardListRowLeftTd">
-                    <img :src="imageTest" alt="imageTest" />
-                  </td>
-                </tr>
+                제목
               </table>
-
-              <!-- Pagination start-->
-              <div id="pagination" class="md-layout-item md-xsmall-size-100">
-                <span class="prevNextButton">prev</span>
-                <pagination
-                  no-arrows
-                  v-model="defaultPagination"
-                  :page-count="5"
-                >
-                </pagination>
-                <span class="prevNextButton">next</span>
-              </div>
-              <!-- Pagination end -->
             </div>
           </div>
           <!-- <BoardList></BoardList> -->
@@ -351,7 +314,6 @@ import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
 import BoardList from "./components/BoardListSection.vue";
-import { Pagination } from "@/components";
 
 export default {
   components: {
@@ -365,9 +327,8 @@ export default {
     // JavascriptComponents,
     // LoginCard
     // BoardList
-    Pagination
   },
-  name: "board",
+  name: "boardWrite",
   bodyClass: "index-page",
   props: {
     image: {
@@ -409,7 +370,7 @@ export default {
       email: null,
       password: null,
       leafShow: false,
-      subject: "Category",
+      category: null,
       imageTest: require("@/assets/img/faces/isak.jpg"),
       // Pagination
       defaultPagination: 1
@@ -422,12 +383,6 @@ export default {
       } else {
         this.leafShow = true;
       }
-    },
-    movePageBoardWrite() {
-      this.$router.push({
-        path: "/boardWrite",
-        params: { category: this.$route.query.title }
-      });
     }
   },
   computed: {
@@ -447,6 +402,8 @@ export default {
     // console.log(url)
     this.leafActive();
     window.addEventListener("resize", this.leafActive);
+    console.log(this.$route.params)
+    this.category = this.$route.params.category;
   },
   beforeDestroy() {
     window.removeEventListener("resize", this.leafActive);

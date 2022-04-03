@@ -170,11 +170,12 @@
                         <p>Blog Category</p>
                       </md-button>
                       <ul class="dropdown-menu dropdown-with-icons">
-
                         <!-- blogTypeArray -->
                         <li v-for="(a, i) in blogTypeArray" :key="i">
-                          <router-link :to="{path : `/blog`, query :{title : a}}"> 
-                          {{a}}
+                          <router-link
+                            :to="{ path: `/blog`, query: { title: a } }"
+                          >
+                            {{ a }}
                           </router-link>
                           <!-- <a :href="'#/board?subject='+a">
                             <i class="material-icons">article</i>
@@ -354,13 +355,21 @@ export default {
     return {
       extraNavClasses: "",
       toggledClass: false,
-      blogTypeArray : ['Vue.js','Java','Database'],
-      boardTypeArray : ['자유게시판'],
+      blogTypeArray: ["Vue.js", "Java", "Database"],
+      boardTypeArray: ["자유게시판"]
     };
   },
   computed: {
+    // Index 메뉴가 아닌 MenuList 보여주기
     showDownload() {
-      const excludedRoutes = ["login", "landing", "profile", "blog",'board'];
+      const excludedRoutes = [
+        "login",
+        "landing",
+        "profile",
+        "blog",
+        "board",
+        "boardWrite"
+      ];
       return excludedRoutes.every(r => r !== this.$route.name);
     }
   },

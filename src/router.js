@@ -9,6 +9,7 @@ import MainFooter from "./layout/MainFooter.vue";
 import ComponentsAll from "./views/ComponentsAll.vue";
 import Blog from "./views/Blog.vue";
 import Board from "./views/Board.vue";
+import BoardWrite from "./views/BoardWrite.vue";
 
 Vue.use(Router);
 
@@ -26,7 +27,11 @@ export default new Router({
     {
       path: "/componentsAll",
       name: "componentsAll",
-      components: { default: ComponentsAll, header: MainNavbar, footer: MainFooter },
+      components: {
+        default: ComponentsAll,
+        header: MainNavbar,
+        footer: MainFooter
+      },
       props: {
         header: { colorOnScroll: 400 },
         footer: { backgroundColor: "black" }
@@ -51,6 +56,19 @@ export default new Router({
       }
     },
     {
+      path: "/boardWrite",
+      name: "boardWrite",
+      components: {
+        default: BoardWrite,
+        header: MainNavbar,
+        footer: MainFooter
+      },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
+    {
       path: "/landing",
       name: "landing",
       components: { default: Landing, header: MainNavbar, footer: MainFooter },
@@ -64,7 +82,8 @@ export default new Router({
       name: "login",
       components: { default: Login, header: MainNavbar, footer: MainFooter },
       props: {
-        header: { colorOnScroll: 400 }
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" } // 추가
       }
     },
     {
