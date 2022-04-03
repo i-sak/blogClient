@@ -71,20 +71,29 @@
                 속성 제거 
                  -->
               <md-list-item v-if="showDownload">
-                <p class="menuList"><router-link to="/landing">Landing Page</router-link></p>
+                <p class="menuList">
+                  <router-link to="/landing">Landing Page</router-link>
+                </p>
               </md-list-item>
 
               <md-list-item v-if="showDownload">
-                <p class="menuList"><router-link to="/profile">Profile</router-link></p>
+                <p class="menuList">
+                  <router-link to="/profile">Profile</router-link>
+                </p>
               </md-list-item>
 
-              <!-- <md-list-item
-                href="https://github.com/i-sak"
-                target="_blank"
-                v-if="showDownload">
-                <p>Github</p>
-              </md-list-item> -->
-              
+              <md-list-item v-if="showDownload">
+                <p class="menuList">
+                  <router-link to="/login">Login</router-link>
+                </p>
+              </md-list-item>
+
+              <md-list-item v-if="showDownload">
+                <p class="menuList">
+                  <a href="https://github.com/i-sak" target="_blank">Github</a>
+                </p>
+              </md-list-item>
+
               <!-- Document 개발 문서 -->
               <!-- <md-list-item
                 href="https://demos.creative-tim.com/vue-material-kit/documentation/"

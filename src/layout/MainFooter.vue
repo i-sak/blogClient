@@ -8,7 +8,9 @@
       <nav>
         <ul>
           <li>
-            <router-link to="/"><strong id="footerOwner"> Isaac's </strong></router-link>
+            <router-link to="/"
+              ><strong id="footerOwner"> Isaac's </strong></router-link
+            >
           </li>
           <li>
             <a href="https://lifere.tistory.com/" target="_blank">Tistory</a>
@@ -29,17 +31,23 @@
             </a> -->
           </li>
           <li>
-            <a href="https://smartstore.naver.com/topperfriends" target="_blank">Topper Friends</a>
+            <a href="https://smartstore.naver.com/topperfriends" target="_blank"
+              >Topper Friends</a
+            >
             <!-- <a href="https://www.creative-tim.com/license">
               Licenses
             </a> -->
           </li>
-          <!-- <li>
+          <li>
             <router-link to="/componentsAll">componentsAll</router-link>
           </li>
           <li>
-            <a href="https://demos.creative-tim.com/vue-material-kit/documentation/" target="_blank">DOCUMENTATION</a>
-          </li> -->
+            <a
+              href="https://demos.creative-tim.com/vue-material-kit/documentation/"
+              target="_blank"
+              >DOCUMENTATION</a
+            >
+          </li>
         </ul>
       </nav>
       <!-- <div class="copyright">
@@ -67,12 +75,12 @@ export default {
 div.copyright,
 div.copyright a,
 div.copyright a:visited {
-  color : #cccccc;
+  color: #cccccc;
 }
 #footerOwner {
   font-weight: 900;
   font-size: 150%;
-  color : #108b17;
+  color: #108b17;
   padding-right: 10px;
 }
 </style>

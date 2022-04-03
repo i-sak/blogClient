@@ -77,6 +77,19 @@
                   </td>
                 </tr>
               </table>
+
+              <!-- Pagination start-->
+              <div id="pagination" class="md-layout-item md-xsmall-size-100">
+                <span class="prevNextButton">prev</span>
+                <pagination
+                  no-arrows
+                  v-model="defaultPagination"
+                  :page-count="5"
+                >
+                </pagination>
+                <span class="prevNextButton">next</span>
+              </div>
+              <!-- Pagination end -->
             </div>
           </div>
           <!-- <BoardList></BoardList> -->
@@ -336,6 +349,8 @@ import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
 import BoardList from "./components/BoardListSection.vue";
+import { Pagination } from "@/components";
+
 export default {
   components: {
     // BasicElements,
@@ -348,6 +363,7 @@ export default {
     // JavascriptComponents,
     // LoginCard
     // BoardList
+    Pagination
   },
   name: "board",
   bodyClass: "index-page",
@@ -392,7 +408,9 @@ export default {
       password: null,
       leafShow: false,
       subject: "Category",
-      imageTest: require("@/assets/img/faces/isak.jpg")
+      imageTest: require("@/assets/img/faces/isak.jpg"),
+      // Pagination
+      defaultPagination: 1
     };
   },
   methods: {
@@ -450,14 +468,11 @@ export default {
   word-break: break-all;
 }
 .boardListRowRightTd {
-  // background: skyblue;
   width: 88vw;
 }
 .boardListRowLeftTd {
-  // background: greenyellow;
   width: 12vw;
 }
-
 .boardRowDetailTitle h4,
 .boardRowDetailContents p,
 .boardRowDetailInfo p {
@@ -466,5 +481,18 @@ export default {
 }
 .boardButtonSpace {
   text-align: right;
+}
+div#pagination {
+  display: flex;
+  justify-content: center;
+}
+span.prevNextButton {
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  color: white;
+  border-radius: 40%;
+  background-color: var(--md-theme-default-primary-on-background, #9c27b0);
 }
 </style>

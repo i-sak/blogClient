@@ -42,12 +42,14 @@
                   <td class="boardListRowRightTd">
                     <div class="boardRowDetailTitle">
                       <h4>
-                        <strong>블로그 제목 입니다. TEST TEST TEST</strong>
+                        <strong
+                          >블로그 제목 입니다. TEST TEST TEST test TE</strong
+                        >
                       </h4>
                     </div>
                     <div class="boardRowDetailContents">
                       <p>
-                        내용 미리보기 TEST TEST TEST TEST TEST TEST TEST TEST
+                        내용 미리보기 TEST TEST TEST TEST TEST TEST TEST
                       </p>
                     </div>
                     <div class="boardRowDetailInfo">
@@ -59,6 +61,19 @@
                   </td>
                 </tr>
               </table>
+
+              <!-- Pagination start-->
+              <div id="pagination" class="md-layout-item md-xsmall-size-100">
+                <span class="prevNextButton">prev</span>
+                <pagination
+                  no-arrows
+                  v-model="defaultPagination"
+                  :page-count="5"
+                >
+                </pagination>
+                <span class="prevNextButton">next</span>
+              </div>
+              <!-- Pagination end -->
             </div>
           </div>
           <!-- <BoardList></BoardList> -->
@@ -323,6 +338,7 @@ import Notifications from "./components/NotificationsSection";
 import TypographyImages from "./components/TypographyImagesSection";
 import JavascriptComponents from "./components/JavascriptComponentsSection";
 import { LoginCard } from "@/components";
+import { Pagination } from "@/components";
 
 export default {
   components: {
@@ -335,6 +351,7 @@ export default {
     // TypographyImages,
     // JavascriptComponents,
     // LoginCard
+    Pagination
   },
   name: "board",
   bodyClass: "index-page",
@@ -379,7 +396,9 @@ export default {
       password: null,
       leafShow: false,
       subject: "Category",
-      imageTest: require("@/assets/img/faces/isak.jpg")
+      imageTest: require("@/assets/img/faces/isak.jpg"),
+      // Pagination
+      defaultPagination: 1
     };
   },
   methods: {
@@ -454,5 +473,18 @@ export default {
 }
 .boardButtonSpace {
   text-align: right;
+}
+div#pagination {
+  display: flex;
+  justify-content: center;
+}
+span.prevNextButton {
+  padding: 3px;
+  padding-left: 10px;
+  padding-right: 10px;
+  margin: auto;
+  color: white;
+  border-radius: 40%;
+  background-color: var(--md-theme-default-primary-on-background, #9c27b0);
 }
 </style>
