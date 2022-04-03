@@ -38,7 +38,7 @@
       <div class="section section-basic">
         <div class="container">
           <div class="title">
-            <h2>{{ this.$route.query.title }} 목록</h2>
+            <h3>{{ this.$route.query.title }} 목록</h3>
             <div class="boardButtonSpace">
               <md-button class="md-primary md-round">글쓰기</md-button>
             </div>
@@ -55,7 +55,7 @@
                 what you can built with this powerful kit.
               </h4>
                -->
-              <table>
+              <table border="1">
                 <tr v-for="a in 5" :key="a" class="boardListRow">
                   <td class="boardListRowRightTd">
                     <div class="boardRowDetailTitle">
@@ -464,6 +464,13 @@ export default {
 }
 
 /** 목록관련 */
+table {
+  border-collapse: collapse;
+  border-top: 0px solid white;
+  border-left: 0px solid white;
+  border-right: 0px solid white;
+  border-bottom: 1px solid lightgray;
+}
 .boardListRow {
   word-break: break-all;
 }
@@ -487,7 +494,7 @@ div#pagination {
   justify-content: center;
 }
 span.prevNextButton {
-  padding: 3px;
+  padding: 2px;
   padding-left: 10px;
   padding-right: 10px;
   margin: auto;
