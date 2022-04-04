@@ -58,7 +58,7 @@
               </h4>
                -->
               <table border="1">
-                <tr v-for="a in 5" :key="a" class="boardListRow">
+                <tr v-for="(a, i) in 5" :key="i" class="boardListRow" @click="movePageBoardView(i)">
                   <td class="boardListRowRightTd">
                     <div class="boardRowDetailTitle">
                       <h4>
@@ -427,6 +427,11 @@ export default {
       this.$router.push({
         name: "boardWrite", params: { category: this.$route.query.title }
       });
+    },
+    movePageBoardView() {
+      this.$router.push({
+        name: "boardView", params: {}
+      })
     }
   },
   computed: {
@@ -482,6 +487,9 @@ table {
 }
 .boardListRow {
   word-break: break-all;
+}
+.boardListRow:hover{
+  background: linear-gradient(white, #fff9ff);
 }
 .boardListRowRightTd {
   width: 88vw;

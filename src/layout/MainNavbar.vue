@@ -368,7 +368,8 @@ export default {
         "profile",
         "blog",
         "board",
-        "boardWrite"
+        "boardWrite",
+        "boardView"
       ];
       return excludedRoutes.every(r => r !== this.$route.name);
     }

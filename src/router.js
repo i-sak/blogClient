@@ -10,6 +10,7 @@ import ComponentsAll from "./views/ComponentsAll.vue";
 import Blog from "./views/Blog.vue";
 import Board from "./views/Board.vue";
 import BoardWrite from "./views/BoardWrite.vue";
+import BoardView from "./views/BoardView.vue";
 
 Vue.use(Router);
 
@@ -60,6 +61,19 @@ export default new Router({
       name: "boardWrite",
       components: {
         default: BoardWrite,
+        header: MainNavbar,
+        footer: MainFooter
+      },
+      props: {
+        header: { colorOnScroll: 400 },
+        footer: { backgroundColor: "black" }
+      }
+    },
+    {
+      path: "/boardView",
+      name: "boardView",
+      components: {
+        default: BoardView,
         header: MainNavbar,
         footer: MainFooter
       },
