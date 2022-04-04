@@ -9,8 +9,8 @@
             <img :src="leaf2" alt="leaf2" class="leaf2" v-show="leafShow" />
             <img :src="leaf1" alt="leaf1" class="leaf1" v-show="leafShow" />
             <div class="brand">
-              <h2 id="title">{{$route.params.category}}</h2>
-              <h3>글쓰기</h3>
+              <h2 id="title">제목</h2>
+              <h3>...</h3>
             </div>
           </div>
         </div>
@@ -40,7 +40,7 @@
           <div class="wrapper">
             <div id="inputs">
               <div class="title">
-                <h3>{{$route.params.category}}에 글쓰기</h3>
+                <h3>상세내용</h3>
               </div>
               <div class="md-layout">
                 <div
@@ -48,17 +48,19 @@
                 >
                   <div class="boardButtonSpace">
                     <md-button class="md-primary md-round"
-                      >등록하기</md-button
-                    >
+                      >삭제하기</md-button>&nbsp;
+                    <md-button class="md-primary md-round"
+                      >수정하기</md-button>
                   </div>
-                  <md-field>
-                    <label>Title</label>
-                    <md-input v-model="boardTitle" type="text"></md-input>
-                  </md-field>
-                  <md-field>
-                    <label>About Me</label>
-                    <md-textarea v-model="boardContent"></md-textarea>
-                  </md-field>
+                  
+                  <div>
+                    <h2>제목입니다.</h2>
+                  </div>
+                  
+                  <div>
+                    <p>Welcome to my world.</p>
+                  </div>
+                  
                 </div>
               </div>
             </div>
