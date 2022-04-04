@@ -48,6 +48,9 @@
               >DOCUMENTATION</a
             >
           </li>
+          <li>
+            <a>API</a>
+          </li>
         </ul>
       </nav>
       <!-- <div class="copyright">
