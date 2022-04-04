@@ -425,8 +425,7 @@ export default {
     },
     movePageBoardWrite() {
       this.$router.push({
-        path: "/boardWrite",
-        params: { category: this.$route.query.title }
+        name: "boardWrite", params: { category: this.$route.query.title }
       });
     }
   },
